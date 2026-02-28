@@ -1,65 +1,130 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My CV</title>
+    <title>My CV - Styled</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f4f6f9;
+        }
+
+        .cv-container {
+            background: white;
+            padding: 40px;
+            margin-top: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #0d6efd;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            border-bottom: 2px solid #0d6efd;
+            padding-bottom: 5px;
+            margin-top: 25px;
+            color: #333;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
+
 <body>
 
-<h1>Curriculum Vitae</h1>
+<div class="container">
+    <div class="cv-container">
 
-<h2>Personal Information</h2>
-<p><b>Name:</b> Ayoob Rasheed</p>
-<p><b>Father's Name:</b> Rashid Anwar</p>
-<p><b>Occupation:</b> Student (Currently)</p>
+        <h1>Curriculum Vitae</h1>
 
-<h2>Career Objective</h2>
-<p>
-I am a Computer Systems Engineering student seeking to build a career in
-embedded systems and software development. I aim to improve my technical
-skills and contribute to innovative projects.
-</p>
+        <div class="section">
+            <h2>Personal Information</h2>
+            <p><strong>Name:</strong> Ayoob Rasheed</p>
+            <p><strong>Father's Name:</strong> Rashid Anwar</p>
+            <p><strong>Occupation:</strong> Student (Currently)</p>
+        </div>
 
-<h2>Education</h2>
-<ul>
-    <li>Bachelor of Computer Systems Engineering – UET Peshawar </li>
-    <li>Intermediate (FSc Pre-Engineering) –Brilliant Science College Katlang</li>
-    <li>DIT – Oxbridge College Katlang</li>
-</ul>
+        <div class="section">
+            <h2>Career Objective</h2>
+            <p>
+                I am a Computer Systems Engineering student seeking to build a career in
+                embedded systems and software development. I aim to improve my technical
+                skills and contribute to innovative projects.
+            </p>
+        </div>
 
-<h2>Technical Skills</h2>
-<ul>
-    <li>C/C++ Programming</li>
-    <li>Arduino Programming</li>
-    <li>Basic Flutter Development</li>
-    <li>HTML Basics</li>
-    <li>Embedded Systems Fundamentals</li>
-</ul>
+        <div class="section">
+            <h2>Education</h2>
+            <ul class="list-group">
+                <li class="list-group-item">Bachelor of Computer Systems Engineering – UET Peshawar</li>
+                <li class="list-group-item">Intermediate (FSc Pre-Engineering) – Brilliant Science College Katlang</li>
+                <li class="list-group-item">DIT – Oxbridge College Katlang</li>
+            </ul>
+        </div>
 
-<h2>Projects</h2>
-<ul>
-    <li>RC Robot Vehicle using Arduino</li>
-    <li>2048 Game in C</li>
-    <li>Automatic Tank Re-Filler (Arduino Project)</li>
-    <li>Automatic turning solar panel</li>
-</ul>
+        <div class="section">
+            <h2>Technical Skills</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul>
+                        <li>C/C++ Programming</li>
+                        <li>Arduino Programming</li>
+                        <li>Basic Flutter Development</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul>
+                        <li>HTML Basics</li>
+                        <li>Embedded Systems Fundamentals</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-<h2>Hobbies</h2>
-<ul>
-    <li>Playing Volleyball</li>
-    <li>Learning New Technologies</li>
-    <li>Using Social Media</li>
-</ul>
+        <div class="section">
+            <h2>Projects</h2>
+            <ul class="list-group">
+                <li class="list-group-item">RC Robot Vehicle using Arduino</li>
+                <li class="list-group-item">2048 Game in C</li>
+                <li class="list-group-item">Automatic Tank Re-Filler (Arduino Project)</li>
+                <li class="list-group-item">Automatic Turning Solar Panel</li>
+            </ul>
+        </div>
 
-<h2>Languages</h2>
-<ul>
-    <li>English</li>
-    <li>Urdu</li>
-    <li>Arabic</li>
-</ul>
+        <div class="section">
+            <h2>Hobbies</h2>
+            <ul>
+                <li>Playing Volleyball</li>
+                <li>Learning New Technologies</li>
+                <li>Using Social Media</li>
+            </ul>
+        </div>
 
-<h2>Contact Information</h2>
-<p><b>Phone:</b> +92 370 9013067</p>
-<p><b>Email:</b> ayoobrasheed3@gmail.com</p>
+        <div class="section">
+            <h2>Languages</h2>
+            <ul>
+                <li>English</li>
+                <li>Urdu</li>
+                <li>Arabic</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Contact Information</h2>
+            <p><strong>Phone:</strong> +92 370 9013067</p>
+            <p><strong>Email:</strong> ayoobrasheed3@gmail.com</p>
+        </div>
+
+    </div>
+</div>
 
 </body>
 </html>
