@@ -1,132 +1,252 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Ayoob Rasheed - CV</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ayoob Rasheed - CV</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
-        body {
-            background-color: #e9ecef;
-        }
+<style>
 
-        .cv-container {
-            max-width: 1000px;
-            margin: 40px auto;
-            background: white;
-            box-shadow: 0 0 20px rgba(0,0,0,0.1);
-        }
+:root {
+    --navy: #0f172a;
+    --teal: #14b8a6;
+    --light: #f1f5f9;
+    --card-bg: #ffffff;
+}
 
-        .left-column {
-            background-color: #0d6efd;
-            color: white;
-            padding: 30px;
-        }
+/* General */
+body {
+    background-color: var(--light);
+    font-family: 'Segoe UI', sans-serif;
+}
 
-        .left-column h2 {
-            border-bottom: 1px solid white;
-            padding-bottom: 5px;
-            margin-top: 20px;
-            font-size: 18px;
-        }
+/* Main Container */
+.cv-container {
+    max-width: 1100px;
+    margin: auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
 
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 1px solid white;
-            display: block;
-            margin: 0 auto 20px auto;
-        }
+/* Sidebar */
+.sidebar {
+    background-color: var(--navy);
+    color: white;
+    min-height: 100vh;
+    padding: 40px 30px;
 
-        .right-column {
-            padding: 40px;
-        }
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
 
-        .right-column h1 {
-            color: #0d6efd;
-            font-weight: bold;
-        }
+.profile-img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--teal);
+    margin-bottom: 15px;
+}
 
-        .right-column h3 {
-            border-bottom: 2px solid #0d6efd;
-            padding-bottom: 5px;
-            margin-top: 25px;
-        }
+.sidebar h1 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
 
-        ul {
-            padding-left: 20px;
-        }
-    </style>
+.role-title {
+    color: var(--teal);
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+/* Section spacing inside sidebar */
+.sidebar-section {
+    margin-bottom: 35px;
+}
+
+.sidebar h5 {
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 6px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sidebar p {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.sidebar a {
+    color: #cbd5e1;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    color: var(--teal);
+}
+
+/* Progress bars */
+.progress {
+    height: 6px;
+    background-color: rgba(255,255,255,0.2);
+    margin-bottom: 12px;
+}
+
+.progress-bar {
+    background-color: var(--teal);
+}
+
+/* Main Content */
+.main-content {
+    padding: 40px;
+}
+
+/* Cards */
+.cv-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.cv-card:hover {
+    transform: translateY(-4px);
+}
+
+.cv-card h4 {
+    color: var(--navy);
+    border-left: 4px solid var(--teal);
+    padding-left: 10px;
+    margin-bottom: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        min-height: auto;
+        text-align: center;
+    }
+}
+
+</style>
 </head>
 
 <body>
 
-<div class="container cv-container">
-    <div class="row">
+<div class="container-fluid cv-container">
+<div class="row">
 
-        <!-- LEFT COLUMN -->
-        <div class="col-md-4 left-column text-center">
+<!-- SIDEBAR (Reduced Width) -->
+<div class="col-md-3 sidebar text-center">
 
-            <!-- Replace profile.jpg with your image file -->
-            <img src="profile_m.jpeg" alt="Profile Picture" class="profile-img">
+    <img src="profile_m.jpeg" class="profile-img" alt="Profile Picture">
 
-            <h2>Contact</h2>
-            <p>📞 +92 370 9013067</p>
-            <p>✉ ayoobrasheed3@gmail.com</p>
+    <h1>Ayoob Rasheed</h1>
+    <div class="role-title">Embedded Systems & IoT Enthusiast</div>
 
-            <h2>Languages</h2>
-            <p>English</p>
-            <p>Urdu</p>
-            <p>Arabic</p>
+    <div class="sidebar-section">
+        <h5>Contact</h5>
+        <p>📍 Peshawar, Pakistan</p>
+        <p>📞 +92 370 9013067</p>
+        <p>✉ ayoobrasheed3@gmail.com</p>
+    </div>
 
-            <h2>Technical Skills</h2>
-            <p>C / C++</p>
-            <p>Arduino</p>
-            <p>Flutter (Basic)</p>
-            <p>HTML</p>
-            <p>Embedded Systems</p>
+    <div class="sidebar-section">
+        <h5>Links</h5>
+        <p><a href="https://www.linkedin.com/in/ayoob-rasheed/" target="_blank">LinkedIn</a></p>
+        <p><a href="https://github.com/Mr-Ayoob-Rasheed/" target="_blank">GitHub</a></p>
+    </div>
 
-            <h2>Hobbies</h2>
-            <p>Volleyball</p>
-            <p>Learning Tech</p>
-            <p>Social Media</p>
+    <div class="sidebar-section">
+        <h5>Technical Skills</h5>
+        <p>C / C++ (Intermediate)</p>
+        <p>Arduino & Embedded Systems</p>
+        <p>Flutter</p>
+        <p>Verilog (Beginner)</p>
+        <p>HTML / CSS</p>
+    </div>
 
+    <div class="sidebar-section">
+        <h5>Languages</h5>
+
+        <p>English</p>
+        <div class="progress">
+            <div class="progress-bar" style="width: 85%;"></div>
         </div>
 
-        <!-- RIGHT COLUMN -->
-        <div class="col-md-8 right-column">
+        <p>Urdu</p>
+        <div class="progress">
+            <div class="progress-bar" style="width: 100%;"></div>
+        </div>
 
-            <h1>Ayoob Rasheed</h1>
-            <p><strong>Computer Systems Engineering Student</strong></p>
-
-            <h3>Career Objective</h3>
-            <p>
-                Motivated Computer Systems Engineering student with strong interest in 
-                embedded systems and software development. Seeking opportunities to 
-                enhance technical expertise and contribute to innovative engineering projects.
-            </p>
-
-            <h3>Education</h3>
-            <ul>
-                <li><strong>Bachelor of Computer Systems Engineering</strong> – UET Peshawar</li>
-                <li><strong>FSc (Pre-Engineering)</strong> – Brilliant Science College Katlang</li>
-                <li><strong>Diploma in Information Technology (DIT)</strong> – Oxbridge College Katlang</li>
-            </ul>
-
-            <h3>Projects</h3>
-            <ul>
-                <li><strong>RC Robot Vehicle</strong> – Arduino based remote controlled robot</li>
-                <li><strong>2048 Game in C</strong> – Console-based logic game</li>
-                <li><strong>Automatic Tank Re-Filler</strong> – Arduino water control system</li>
-                <li><strong>Automatic Solar Tracking Panel</strong></li>
-            </ul>
-
+        <p>Arabic</p>
+        <div class="progress">
+            <div class="progress-bar" style="width: 60%;"></div>
         </div>
 
     </div>
+
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="col-md-9 main-content">
+
+    <div class="cv-card">
+        <h4>Professional Summary</h4>
+        <p>
+            6th semester Computer Systems Engineering student with strong interest in 
+            Embedded Systems and IoT development. Experienced in building hardware-based 
+            automation systems using Arduino and developing mobile applications using Flutter.
+        </p>
+    </div>
+
+    <div class="cv-card">
+        <h4>Experience</h4>
+
+        <strong>Flutter Intern – NeuroApp</strong><br>
+        <small>Jan 2025 – Present | Hybrid</small>
+        <ul>
+            <li>Developed responsive UI screens using Flutter.</li>
+            <li>Integrated REST APIs and managed application state.</li>
+            <li>Collaborated with cross-functional teams.</li>
+        </ul>
+
+        <strong>AI Intern – Microsoft (MLSA Collaboration)</strong><br>
+        <small>Jul 2025 – Aug 2025 | Remote</small>
+    </div>
+
+    <div class="cv-card">
+        <h4>Projects</h4>
+
+        <strong>RC Robot Vehicle (Arduino UNO)</strong>
+        <ul>
+            <li>Designed and programmed robot in a team of 3.</li>
+        </ul>
+
+        <strong>IR-Based Automatic Water Tap</strong>
+        <ul>
+            <li>Developed touchless water system using IR sensor.</li>
+        </ul>
+
+        <strong>Automatic Solar Tracker</strong>
+        <ul>
+            <li>Built amplifier-based light tracking system.</li>
+        </ul>
+
+        <strong>2048 Game in C</strong>
+        <ul>
+            <li>Implemented full game logic and grid management.</li>
+        </ul>
+    </div>
+
+</div>
+
+</div>
 </div>
 
 </body>
