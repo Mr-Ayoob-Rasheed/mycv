@@ -108,30 +108,70 @@ body {
 .cv-card {
     background: var(--card-bg);
     border-radius: 12px;
-    padding: 25px;
-    margin-bottom: 25px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    padding: 18px 20px;   /* reduced padding */
+    margin-bottom: 18px;  /* reduced spacing between cards */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     transition: 0.3s;
 }
 
 .cv-card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-3px);
 }
 
 .cv-card h4 {
     color: var(--navy);
     border-left: 4px solid var(--teal);
-    padding-left: 10px;
-    margin-bottom: 15px;
+    padding-left: 8px;
+    margin-bottom: 10px;
+    font-size: 16px;   /* slightly smaller heading */
+}
+
+/* Reduce content text size slightly */
+.cv-card p {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.cv-card ul {
+    padding-left: 18px;
+    margin-bottom: 6px;
+}
+
+.cv-card li {
+    font-size: 13px;
+    margin-bottom: 5px;
 }
 
 /* Responsive */
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
+
     .sidebar {
-        min-height: auto;
-        text-align: center;
+        padding: 20px 12px;   /* reduce inner spacing */
     }
-} */
+
+    .sidebar h1 {
+        font-size: 14px;
+    }
+
+    .role-title {
+        font-size: 11px;
+    }
+
+    .sidebar h5 {
+        font-size: 11px;
+    }
+
+    .sidebar p,
+    .sidebar a {
+        font-size: 11px;
+        word-break: break-word;   /* THIS FIXES EMAIL OVERFLOW */
+    }
+
+    .profile-img {
+        width: 80px;
+        height: 80px;
+    }
+}
 
 </style>
 </head>
