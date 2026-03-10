@@ -189,7 +189,7 @@ body {
 <!-- SIDEBAR (Reduced Width) -->
 <div class="col-4 col-md-3 sidebar">
 
-    <img src="profile_m.jpeg" class="profile-img" alt="Profile Picture">
+    <img src="profile_m.jpeg" class="profile-img" alt="Profile Picture" onerror="this.src='https://ui-avatars.com/api/?name=Ayoob+Rasheed&background=0D9488&color=fff&size=130'">
 
     <h1>Ayoob Rasheed</h1>
     <div class="role-title">Embedded Systems & IoT Enthusiast</div>
@@ -209,11 +209,12 @@ body {
 
     <div class="sidebar-section">
         <h5>Technical Skills</h5>
-        <p>C / C++ (Intermediate)</p>
-        <p>Arduino & Embedded Systems</p>
-        <p>Flutter</p>
-        <p>Verilog (Beginner)</p>
-        <p>HTML / CSS</p>
+        <p>C / C++ & Assembly</p>
+        <p>Arduino, ESP32, MSP430</p>
+        <p>Sensors & Motor Control</p>
+        <p>KiCad & Code Composer Studio</p>
+        <p>Flutter / UI Development</p>
+        <p>Git / GitHub</p>
     </div>
 
     <div class="sidebar-section">
@@ -244,10 +245,18 @@ body {
     <div class="cv-card">
         <h4>Professional Summary</h4>
         <p>
-            6th semester Computer Systems Engineering student with strong interest in 
-            Embedded Systems and IoT development. Experienced in building hardware-based 
-            automation systems using Arduino and developing mobile applications using Flutter.
+            Motivated Computer Systems Engineering undergraduate with a strong focus on Embedded Systems, Sensor Interfacing, and Internet of Things (IoT). Experienced in programming microcontrollers (MSP430, ESP32, Arduino) in C/C++ and Assembly. Adept at bridging hardware and software through hands-on project experience involving sensor integration, motor control, mobile app development (Flutter), and PCB design concepts.
         </p>
+    </div>
+
+    <div class="cv-card">
+        <h4>Education</h4>
+
+        <strong style="font-size: 15px;">B.Sc. Computer Systems Engineering</strong><br>
+        <small style="font-size: 13px;">University of Engineering and Technology (UET), Peshawar | 2023 – 2027</small>
+        <ul>
+            <li><strong>Relevant Coursework:</strong> Microprocessor Based System Design, Digital Logic Design (DLD).</li>
+        </ul>
     </div>
 
     <div class="cv-card">
@@ -268,24 +277,27 @@ body {
     <div class="cv-card">
         <h4>Projects</h4>
 
-        <strong style="font-size: 14px;">RC Robot Vehicle (Arduino UNO)</strong>
+        <strong style="font-size: 14px;">Autonomous Obstacle Avoidance Robot</strong><br>
+        <small style="font-size: 12px; color: var(--teal);">Arduino UNO, L298N, Ultrasonic Sensor, Servo</small>
         <ul>
-            <li>Designed and programmed robot in a team of 3.</li>
+            <li>Engineered an autonomous mobile robot capable of navigating dynamic environments by scanning forward, left, and right paths.</li>
+            <li>Programmed control logic in C/C++ to drive DC gear motors via an L298N motor driver based on real-time sensor feedback.</li>
         </ul>
+        <br>
 
-        <strong style="font-size: 14px;">IR-Based Automatic Water Tap</strong>
+        <strong style="font-size: 14px;">Ultrasonic Radar Detection System</strong><br>
+        <small style="font-size: 12px; color: var(--teal);">Arduino Nano, Ultrasonic Sensor, Servo</small>
         <ul>
-            <li>Developed touchless water system using IR sensor.</li>
+            <li>Developed a 180-degree radar scanning system that detects the presence of objects within range.</li>
+            <li>Programmed the system to halt scanning and activate an LED indicator denoting the object's exact angular position.</li>
         </ul>
+        <br>
 
-        <strong style="font-size: 14px;">Automatic Solar Tracker</strong>
+        <strong style="font-size: 14px;">Bluetooth-Controlled Mobile Robot</strong><br>
+        <small style="font-size: 12px; color: var(--teal);">Arduino UNO, HC-05 Bluetooth, L298N</small>
         <ul>
-            <li>Built amplifier-based light tracking system.</li>
-        </ul>
-
-        <strong style="font-size: 14px;">2048 Game in C</strong>
-        <ul>
-            <li>Implemented full game logic and grid management.</li>
+            <li>Designed and built a remotely steered "Soccer Robot" as a practical application for the DLD curriculum.</li>
+            <li>Translated wireless serial commands from a smartphone into physical movement using motor drivers.</li>
         </ul>
     </div>
 
