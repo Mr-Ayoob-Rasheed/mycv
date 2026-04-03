@@ -3,309 +3,567 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ayoob Rasheed - CV</title>
+<title>Ayoob Rasheed – Hardware & Digital Design</title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
 
 <style>
-
 :root {
-    --navy: #0f172a;
-    --teal: #14b8a6;
-    --light: #f1f5f9;
-    --card-bg: #ffffff;
+  --nvidia-green: #76b900;
+  --dark-bg: #0d0d0d;
+  --dark-card: #141414;
+  --dark-sidebar: #0a0a0a;
+  --border: rgba(118, 185, 0, 0.2);
+  --text-primary: #f0f0f0;
+  --text-secondary: #a0a0a0;
+  --text-muted: #606060;
+  --accent-glow: rgba(118, 185, 0, 0.08);
 }
 
-/* General */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
 body {
-    background-color: var(--light);
-    font-family: 'Segoe UI', sans-serif;
+  background: var(--dark-bg);
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text-primary);
+  min-height: 100vh;
 }
 
-/* Main Container */
-.cv-container {
-    max-width: 1100px;
-    margin: auto;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+.cv-wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: 100vh;
 }
 
-/* Sidebar */
+/* ── SIDEBAR ── */
 .sidebar {
-    background-color: var(--navy);
-    color: white;
-    min-height: 100vh;
-    padding: 40px 30px;
-
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+  background: var(--dark-sidebar);
+  border-right: 1px solid var(--border);
+  padding: 40px 28px;
+  position: relative;
+  overflow: hidden;
 }
 
-.profile-img {
-    width: 130px;
-    height: 130px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid var(--teal);
-    margin-bottom: 15px;
+.sidebar::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 200px; height: 200px;
+  background: radial-gradient(circle, rgba(118,185,0,0.12) 0%, transparent 70%);
+  pointer-events: none;
 }
 
-.sidebar h1 {
-    font-size: 20px;
-    margin-bottom: 5px;
+.sidebar::after {
+  content: '';
+  position: absolute;
+  bottom: 80px; left: -40px;
+  width: 150px; height: 150px;
+  background: radial-gradient(circle, rgba(118,185,0,0.06) 0%, transparent 70%);
+  pointer-events: none;
 }
 
-.role-title {
-    color: var(--teal);
-    font-size: 13px;
-    margin-bottom: 30px;
+.profile-block {
+  text-align: center;
+  margin-bottom: 36px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--border);
 }
 
-/* Section spacing inside sidebar */
-.sidebar-section {
-    margin-bottom: 35px;
+.avatar {
+  width: 100px; height: 100px;
+  border-radius: 50%;
+  border: 2px solid var(--nvidia-green);
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 16px;
+  box-shadow: 0 0 20px rgba(118,185,0,0.25);
 }
 
-.sidebar h5 {
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-    padding-bottom: 6px;
-    margin-bottom: 15px;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.profile-block h1 {
+  font-family: 'Space Mono', monospace;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  line-height: 1.3;
+  color: var(--text-primary);
+  margin-bottom: 6px;
 }
 
-.sidebar p {
-    font-size: 12px;
-    margin-bottom: 8px;
-
+.role-badge {
+  display: inline-block;
+  background: rgba(118,185,0,0.12);
+  border: 1px solid rgba(118,185,0,0.3);
+  color: var(--nvidia-green);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 2px;
 }
 
-.sidebar a {
-    color: #cbd5e1;
-    text-decoration: none;
-    font-size: 12px;
-
+.sb-section {
+  margin-bottom: 28px;
 }
 
-.sidebar a:hover {
-    color: var(--teal);
+.sb-label {
+  font-family: 'Space Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--nvidia-green);
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
 }
 
-/* Progress bars */
-.progress {
-    height: 6px;
-    background-color: rgba(255,255,255,0.2);
-    margin-bottom: 12px;
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 11.5px;
+  color: var(--text-secondary);
+  line-height: 1.4;
 }
 
-.progress-bar {
-    background-color: var(--teal);
+.contact-item .icon {
+  color: var(--nvidia-green);
+  font-size: 11px;
+  margin-top: 1px;
+  flex-shrink: 0;
 }
 
-/* Main Content */
+.contact-item a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.contact-item a:hover { color: var(--nvidia-green); }
+
+/* Skill tags */
+.skill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.skill-tag {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: var(--text-secondary);
+  font-size: 10.5px;
+  padding: 4px 9px;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+
+.skill-tag.highlight {
+  background: rgba(118,185,0,0.08);
+  border-color: rgba(118,185,0,0.25);
+  color: var(--nvidia-green);
+}
+
+.skill-tag.learning {
+  background: rgba(255,165,0,0.06);
+  border-color: rgba(255,165,0,0.2);
+  color: #f0a040;
+  font-style: italic;
+}
+
+/* Language bars */
+.lang-item { margin-bottom: 14px; }
+.lang-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-bottom: 5px;
+}
+.lang-row span:last-child { color: var(--text-muted); font-size: 10px; }
+.lang-bar {
+  height: 3px;
+  background: rgba(255,255,255,0.06);
+  border-radius: 2px;
+}
+.lang-fill {
+  height: 3px;
+  background: linear-gradient(90deg, var(--nvidia-green), #a0d040);
+  border-radius: 2px;
+  transition: width 1s ease;
+}
+
+/* ── MAIN CONTENT ── */
 .main-content {
-    padding: 12px;
+  padding: 36px 36px 40px;
+  background: var(--dark-bg);
+}
+
+/* Section heading */
+.section-heading {
+  font-family: 'Space Mono', monospace;
+  font-size: 9.5px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--nvidia-green);
+  margin-bottom: 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-heading::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
 }
 
 /* Cards */
-.cv-card {
-    background: var(--card-bg);
-    border-radius: 12px;
-    padding: 18px 20px;   /* reduced padding */
-    margin-bottom: 18px;  /* reduced spacing between cards */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    transition: 0.3s;
+.card {
+  background: var(--dark-card);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 4px;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.25s, box-shadow 0.25s;
 }
 
-.cv-card:hover {
-    transform: translateY(-3px);
+.card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--nvidia-green);
+  border-radius: 4px 0 0 4px;
 }
 
-.cv-card h4 {
-    color: var(--navy);
-    border-left: 4px solid var(--teal);
-    padding-left: 8px;
-    margin-bottom: 10px;
-    font-size: 14px;   /* slightly smaller heading */
+.card:hover {
+  border-color: rgba(118,185,0,0.2);
+  box-shadow: 0 0 20px rgba(118,185,0,0.05);
 }
 
-/* Reduce content text size slightly */
-.cv-card p {
-    font-size: 11px;
-    margin-bottom: 8px;
+/* Summary */
+.summary-text {
+  font-size: 12.5px;
+  line-height: 1.75;
+  color: var(--text-secondary);
 }
 
-.cv-card ul {
-    padding-left: 18px;
-    margin-bottom: 6px;
-    font-size: 11px;
+.summary-text strong {
+  color: var(--nvidia-green);
+  font-weight: 500;
 }
 
-.cv-card li {
-    font-size: 13px;
-    margin-bottom: 5px;
-    font-size:11px;
+/* Education / Experience headers */
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+  gap: 4px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-
-    .sidebar {
-        padding: 20px 12px;   /* reduce inner spacing */
-    }
-
-    .sidebar h1 {
-        font-size: 14px;
-    }
-
-    .role-title {
-        font-size: 11px;
-    }
-
-    .sidebar h5 {
-        font-size: 11px;
-    }
-
-    .sidebar p,
-    .sidebar a {
-        font-size: 11px;
-        word-break: break-word;   /* THIS FIXES EMAIL OVERFLOW */
-    }
-
-    .profile-img {
-        width: 80px;
-        height: 80px;
-    }
+.entry-title {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-primary);
 }
 
+.entry-date {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.entry-sub {
+  font-size: 11.5px;
+  color: var(--nvidia-green);
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.bullet-list {
+  list-style: none;
+  padding: 0;
+}
+
+.bullet-list li {
+  font-size: 12px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  padding-left: 14px;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.bullet-list li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--nvidia-green);
+  font-size: 10px;
+  top: 2px;
+}
+
+/* Project tags */
+.proj-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.proj-tag {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 2px;
+  background: rgba(118,185,0,0.08);
+  color: var(--nvidia-green);
+  border: 1px solid rgba(118,185,0,0.2);
+  font-family: 'Space Mono', monospace;
+}
+
+/* GPA badge */
+.gpa-badge {
+  display: inline-block;
+  background: rgba(118,185,0,0.1);
+  border: 1px solid rgba(118,185,0,0.3);
+  color: var(--nvidia-green);
+  font-size: 10px;
+  font-family: 'Space Mono', monospace;
+  padding: 2px 8px;
+  border-radius: 2px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.section-gap { margin-bottom: 28px; }
 </style>
 </head>
 
 <body>
+<div class="cv-wrapper">
 
-<div class="container-fluid cv-container">
-<div class="row">
+<!-- ═══ SIDEBAR ═══ -->
+<aside class="sidebar">
 
-<!-- SIDEBAR (Reduced Width) -->
-<div class="col-4 col-md-3 sidebar">
-
-    <img src="profile_m.jpeg" class="profile-img" alt="Profile Picture" onerror="this.src='https://ui-avatars.com/api/?name=Ayoob+Rasheed&background=0D9488&color=fff&size=130'">
-
+  <div class="profile-block">
+    <img src="profile_m.jpeg" class="avatar" alt="Ayoob Rasheed"
+         onerror="this.src='https://ui-avatars.com/api/?name=Ayoob+Rasheed&background=76b900&color=0d0d0d&size=130'">
     <h1>Ayoob Rasheed</h1>
-    <div class="role-title">Embedded Systems & IoT Enthusiast</div>
+    <div class="role-badge">Hardware Design · Digital Systems</div>
+  </div>
 
-    <div class="sidebar-section">
-        <h5>Contact</h5>
-        <p>📍 Peshawar, Pakistan</p>
-        <p>📞 +92 370 9013067</p>
-        <p>✉ ayoobrasheed3@gmail.com</p>
+  <div class="sb-section">
+    <div class="sb-label">Contact</div>
+    <div class="contact-item">
+      <span class="icon">📍</span>
+      <span>Peshawar, Pakistan</span>
     </div>
-
-    <div class="sidebar-section">
-        <h5>Links</h5>
-        <p><a href="https://www.linkedin.com/in/ayoob-rasheed/" target="_blank">LinkedIn</a></p>
-        <p><a href="https://github.com/Mr-Ayoob-Rasheed/" target="_blank">GitHub</a></p>
+    <div class="contact-item">
+      <span class="icon">📞</span>
+      <span>+92 370 9013067</span>
     </div>
-
-    <div class="sidebar-section">
-        <h5>Technical Skills</h5>
-        <p>Teaching</p>
-        <p>C / C++ & Assembly</p>
-        <p>Arduino, ESP32, MSP430</p>
-        <p>Sensors & Motor Control</p>
-        <p>KiCad & Code Composer Studio</p>
-        <p>Flutter / UI Development</p>
-        <p>Git / GitHub</p>
+    <div class="contact-item">
+      <span class="icon">✉</span>
+      <a href="mailto:ayoobrasheed3@gmail.com">ayoobrasheed3@gmail.com</a>
     </div>
+    <div class="contact-item">
+      <span class="icon">💼</span>
+      <a href="https://www.linkedin.com/in/ayoob-rasheed/" target="_blank">linkedin.com/in/ayoob-rasheed</a>
+    </div>
+    <div class="contact-item">
+      <span class="icon">🐙</span>
+      <a href="https://github.com/Mr-Ayoob-Rasheed/" target="_blank">github.com/Mr-Ayoob-Rasheed</a>
+    </div>
+  </div>
 
-    <div class="sidebar-section">
-        <h5>Languages</h5>
+  <div class="sb-section">
+    <div class="sb-label">Hardware & Design</div>
+    <div class="skill-grid">
+      <span class="skill-tag highlight">Digital Logic Design</span>
+      <span class="skill-tag highlight">Computer Architecture</span>
+      <span class="skill-tag highlight">RTL Design</span>
+      <span class="skill-tag highlight">Circuit Theory</span>
+      <span class="skill-tag highlight">Microcontroller Systems</span>
+      <span class="skill-tag highlight">Sensor Interfacing</span>
+      <span class="skill-tag highlight">Motor Control</span>
+      <span class="skill-tag highlight">PCB Concepts (KiCad)</span>
+      <span class="skill-tag highlight">Digital Signal Processing</span>
+      <span class="skill-tag highlight">Verilog (HDL)</span>
+    </div>
+  </div>
 
-        <p>English</p>
-        <div class="progress">
-            <div class="progress-bar" style="width: 85%;"></div>
+  <div class="sb-section">
+    <div class="sb-label">Programming & Tools</div>
+    <div class="skill-grid">
+      <span class="skill-tag highlight">C / C++</span>
+      <span class="skill-tag highlight">Python</span>
+      <span class="skill-tag highlight">Linux / Bash</span>
+      <span class="skill-tag highlight">Assembly</span>
+      <span class="skill-tag">Git / GitHub</span>
+      <span class="skill-tag">Arduino / ESP32 / MSP430</span>
+      <span class="skill-tag">Code Composer Studio</span>
+      <span class="skill-tag">Flutter</span>
+    </div>
+  </div>
+
+  <div class="sb-section">
+    <div class="sb-label">Languages</div>
+
+    <div class="lang-item">
+      <div class="lang-row"><span>English</span><span>Professional</span></div>
+      <div class="lang-bar"><div class="lang-fill" style="width:85%"></div></div>
+    </div>
+    <div class="lang-item">
+      <div class="lang-row"><span>Urdu</span><span>Native</span></div>
+      <div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div>
+    </div>
+    <div class="lang-item">
+      <div class="lang-row"><span>Arabic</span><span>Basic</span></div>
+      <div class="lang-bar"><div class="lang-fill" style="width:40%"></div></div>
+    </div>
+  </div>
+
+</aside>
+
+<!-- ═══ MAIN CONTENT ═══ -->
+<main class="main-content">
+
+  <!-- Summary -->
+  <section class="section-gap">
+    <div class="section-heading">Professional Summary</div>
+    <div class="card">
+      <p class="summary-text">
+        Computer Systems Engineering undergraduate at UET Peshawar with a strong foundation in
+        <strong>digital logic design, computer architecture, and low level hardware design</strong>.
+        Gained hands-on Verilog experience through Microprocessor-Based System Design coursework, alongside Assembly programming
+        and Digital Signal Processing — directly aligned with NVIDIA's ASIC design requirements.
+        Complemented by practical embedded projects on MSP430, ESP32, and Arduino in C/C++, covering real-time control,
+        sensor interfacing, and hardware-software co-design.
+        Proficient in <strong>Linux</strong>  
+      </p>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="section-gap">
+    <div class="section-heading">Education</div>
+    <div class="card">
+      <div class="entry-header">
+        <div class="entry-title">
+          B.Sc. Computer Systems Engineering
         </div>
+        <div class="entry-date">2023 – 2027</div>
+      </div>
+      <div class="entry-sub">University of Engineering and Technology (UET), Peshawar</div>
+      <ul class="bullet-list">
+        <li><strong>Relevant Coursework:</strong> Digital Logic Design (DLD), Microprocessor-Based System Design (incl. Verilog & Assembly), Computer Architecture and Digital Signal Processing (DSP)</li>
+        <li>Gained practical exposure through Verilog-based coursework; applied Assembly programming for low-level microprocessor control and performance-critical routines.</li>
+      </ul>
+    </div>
+  </section>
 
-        <p>Urdu</p>
-        <div class="progress">
-            <div class="progress-bar" style="width: 100%;"></div>
-        </div>
+  <!-- Experience -->
+  <section class="section-gap">
+    <div class="section-heading">Experience</div>
 
-        <p>Arabic</p>
-        <div class="progress">
-            <div class="progress-bar" style="width: 60%;"></div>
-        </div>
-
+    <div class="card">
+      <div class="entry-header">
+        <div class="entry-title">AI Intern – Microsoft (MLSA Collaboration)</div>
+        <div class="entry-date">Jul 2025 – Aug 2025 · Remote</div>
+      </div>
+      <div class="entry-sub">Microsoft · Azure AI / Machine Learning Student Ambassador Program</div>
+      <ul class="bullet-list">
+        <li>Worked with AI/ML toolchains under Microsoft's Azure ecosystem, gaining exposure to large-scale software infrastructure and data pipelines.</li>
+        <li>Developed scripting and automation skills applicable to hardware CAD tool development and flow scripting.</li>
+      </ul>
     </div>
 
+    <div class="card">
+      <div class="entry-header">
+        <div class="entry-title">Flutter Intern – NeuroApp</div>
+        <div class="entry-date">Jan 2025 – Present · Hybrid</div>
+      </div>
+      <div class="entry-sub">Software Development · Cross-Platform Applications</div>
+      <ul class="bullet-list">
+        <li>Developed responsive UI screens and integrated REST APIs, demonstrating ability to work across hardware-adjacent software layers.</li>
+        <li>Applied object-oriented programming principles and state management in a production environment — skills directly transferable to C++-based hardware tooling.</li>
+        <li>Collaborated with cross-functional engineering teams, practicing agile workflows and version control via Git.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section-gap">
+    <div class="section-heading">Projects</div>
+
+    <div class="card">
+      <div class="entry-header">
+        <div class="entry-title">Autonomous Obstacle Avoidance Robot</div>
+        <div class="entry-date">Digital Systems · Embedded Control</div>
+      </div>
+      <div class="proj-tags">
+        <span class="proj-tag">Arduino UNO</span>
+        <span class="proj-tag">C/C++</span>
+        <span class="proj-tag">L298N Motor Driver</span>
+        <span class="proj-tag">Ultrasonic Sensor</span>
+        <span class="proj-tag">Servo</span>
+      </div>
+      <ul class="bullet-list">
+        <li>Designed and implemented real-time control logic in C/C++ to autonomously navigate dynamic environments using sensor feedback — demonstrating core principles of digital system state management and timing-critical decision loops.</li>
+        <li>Architected the hardware-software interface between sensor input signals and motor driver outputs, mirroring the RTL-to-physical design pipeline used in ASIC development.</li>
+        <li>Performed iterative performance optimization of scanning logic to minimize response latency under constrained computational resources.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="entry-header">
+        <div class="entry-title">Ultrasonic Radar Detection System</div>
+        <div class="entry-date">Instrumentation · Signal Processing</div>
+      </div>
+      <div class="proj-tags">
+        <span class="proj-tag">Arduino Nano</span>
+        <span class="proj-tag">Ultrasonic Sensor</span>
+        <span class="proj-tag">Servo</span>
+        <span class="proj-tag">Angular Position Detection</span>
+      </div>
+      <ul class="bullet-list">
+        <li>Built a 180° rotating radar system that detects objects and resolves their exact angular position — demonstrating spatial signal measurement concepts analogous to silicon instrumentation and on-chip probing.</li>
+        <li>Programmed scan-halt logic and indicator triggering with precise timing control, developing intuition for hardware state machines and interrupt-driven design.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <div class="entry-header">
+        <div class="entry-title">Bluetooth-Controlled Mobile Robot ("Soccer Bot")</div>
+        <div class="entry-date">Digital Logic Design · Wireless Comms</div>
+      </div>
+      <div class="proj-tags">
+        <span class="proj-tag">Arduino UNO</span>
+        <span class="proj-tag">HC-05 Bluetooth</span>
+        <span class="proj-tag">L298N</span>
+        <span class="proj-tag">Serial Protocol</span>
+      </div>
+      <ul class="bullet-list">
+        <li>Translated wireless serial commands from a smartphone into physical actuation — implementing a digital command decoder and motor control pipeline from scratch.</li>
+        <li>Designed as a practical DLD curriculum project, reinforcing digital logic principles including binary encoding, control flow, and I/O interfacing.</li>
+      </ul>
+    </div>
+
+  </section>
+
+</main>
 </div>
-
-<!-- MAIN CONTENT -->
-<div class="col-8 col-md-9 main-content">
-
-    <div class="cv-card">
-        <h4>Professional Summary</h4>
-        <p>
-            Motivated Computer Systems Engineering undergraduate with a strong focus on Embedded Systems, Sensor Interfacing, and Internet of Things (IoT). Experienced in programming microcontrollers (MSP430, ESP32, Arduino) in C/C++ and Assembly. Adept at bridging hardware and software through hands-on project experience involving sensor integration, motor control, mobile app development (Flutter), and PCB design concepts.
-        </p>
-    </div>
-
-    <div class="cv-card">
-        <h4>Education</h4>
-
-        <strong style="font-size: 15px;">B.Sc. Computer Systems Engineering</strong><br>
-        <small style="font-size: 13px;">University of Engineering and Technology (UET), Peshawar | 2023 – 2027</small>
-        <ul>
-            <li><strong>Relevant Coursework:</strong> Microprocessor Based System Design, Digital Logic Design (DLD).</li>
-        </ul>
-    </div>
-
-    <div class="cv-card">
-        <h4>Experience</h4>
-
-        <strong style="font-size: 15px;">Flutter Intern – NeuroApp</strong><br>
-        <small style="font-size: 13px;">Jan 2025 – Present | Hybrid</small>
-        <ul>
-            <li>Developed responsive UI screens using Flutter.</li>
-            <li>Integrated REST APIs and managed application state.</li>
-            <li>Collaborated with cross-functional teams.</li>
-        </ul>
-
-        <strong style="font-size: 15px;">AI Intern – Microsoft (MLSA Collaboration)</strong><br>
-        <small style="font-size: 13px;">Jul 2025 – Aug 2025 | Remote</small>
-    </div>
-
-    <div class="cv-card">
-        <h4>Projects</h4>
-
-        <strong style="font-size: 14px;">Autonomous Obstacle Avoidance Robot</strong><br>
-        <small style="font-size: 12px; color: var(--teal);">Arduino UNO, L298N, Ultrasonic Sensor, Servo</small>
-        <ul>
-            <li>Engineered an autonomous mobile robot capable of navigating dynamic environments by scanning forward, left, and right paths.</li>
-            <li>Programmed control logic in C/C++ to drive DC gear motors via an L298N motor driver based on real-time sensor feedback.</li>
-        </ul>
-        <br>
-
-        <strong style="font-size: 14px;">Ultrasonic Radar Detection System</strong><br>
-        <small style="font-size: 12px; color: var(--teal);">Arduino Nano, Ultrasonic Sensor, Servo</small>
-        <ul>
-            <li>Developed a 180-degree radar scanning system that detects the presence of objects within range.</li>
-            <li>Programmed the system to halt scanning and activate an LED indicator denoting the object's exact angular position.</li>
-        </ul>
-        <br>
-
-        <strong style="font-size: 14px;">Bluetooth-Controlled Mobile Robot</strong><br>
-        <small style="font-size: 12px; color: var(--teal);">Arduino UNO, HC-05 Bluetooth, L298N</small>
-        <ul>
-            <li>Designed and built a remotely steered "Soccer Robot" as a practical application for the DLD curriculum.</li>
-            <li>Translated wireless serial commands from a smartphone into physical movement using motor drivers.</li>
-        </ul>
-    </div>
-
-</div>
-
-</div>
-</div>
-
 </body>
 </html>
