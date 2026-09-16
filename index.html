@@ -24,7 +24,7 @@ body {
   background: #e9e9eb;
   font-family: 'Roboto', Arial, sans-serif;
   color: var(--text-dark);
-  line-height: 1.5;
+  line-height: 1.35; /* Reduced from 1.5 */
 }
 
 /* Main CV Container */
@@ -36,7 +36,7 @@ body {
   display: flex;
   border-radius: 12px;
   box-shadow: 0 8px 30px rgba(0,0,0,0.15);
-  overflow: hidden; /* Ensures curved corners cut off correctly */
+  overflow: hidden; 
   position: relative;
 }
 
@@ -55,15 +55,15 @@ body {
   background: var(--primary-blue);
   color: white;
   text-align: center;
-  padding: 35px 20px 65px 20px;
+  padding: 25px 20px 45px 20px; /* Reduced padding */
 }
 .sidebar-header::after {
   content: '';
   position: absolute;
-  bottom: -25px;
+  bottom: -20px;
   left: 0;
   width: 100%;
-  height: 50px;
+  height: 40px;
   background: var(--primary-blue);
   border-radius: 50%;
   z-index: 1;
@@ -72,7 +72,7 @@ body {
 .name {
   font-size: 24px;
   font-weight: 700;
-  margin-bottom: 5px;
+  margin-bottom: 0px; /* Reduced margin */
   position: relative;
   z-index: 2;
 }
@@ -89,35 +89,35 @@ body {
   position: relative;
   z-index: 2;
   text-align: center;
-  margin-top: -55px; /* Overlaps the curve */
-  margin-bottom: 25px;
+  margin-top: -35px; /* Pulled closer to header */
+  margin-bottom: 15px; /* Reduced margin */
 }
 .profile-img {
-  width: 135px;
-  height: 135px;
+  width: 115px; /* Slightly smaller to save space */
+  height: 115px;
   border-radius: 50%;
-  border: 6px solid var(--sidebar-bg);
+  border: 5px solid var(--sidebar-bg);
   object-fit: cover;
   background: #ccc;
 }
 
 .sidebar-content {
-  padding: 0 25px 80px 25px;
+  padding: 0 20px 50px 20px; /* Reduced padding */
   position: relative;
   z-index: 2;
 }
 
 .side-section {
-  margin-bottom: 30px;
+  margin-bottom: 18px; /* Reduced margin */
 }
 
 /* Sidebar Headings */
 .side-title {
   color: var(--primary-blue);
-  font-size: 20px;
-  font-weight: 400;
-  margin-bottom: 15px;
-  padding-bottom: 5px;
+  font-size: 18px; /* Slightly smaller */
+  font-weight: 500;
+  margin-bottom: 8px; /* Reduced margin */
+  padding-bottom: 3px; /* Reduced padding */
   position: relative;
 }
 .side-title::after {
@@ -134,16 +134,23 @@ body {
 .contact-item {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
-  font-size: 13px;
+  gap: 10px;
+  margin-bottom: 6px; /* Reduced margin */
+  font-size: 12.5px;
   color: var(--text-dark);
 }
 .contact-icon {
-  width: 16px;
-  height: 16px;
+  width: 15px;
+  height: 15px;
   fill: var(--primary-blue);
   flex-shrink: 0;
+}
+.contact-item a {
+  color: var(--text-dark);
+  text-decoration: none;
+}
+.contact-item a:hover {
+  text-decoration: underline;
 }
 
 /* Language Dots */
@@ -151,16 +158,16 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 12px;
-  font-size: 13px;
+  margin-bottom: 6px; /* Reduced margin */
+  font-size: 12.5px;
 }
 .lang-dots {
   display: flex;
-  gap: 4px;
+  gap: 3px;
 }
 .dot {
-  width: 9px;
-  height: 9px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
 }
 .dot.filled { background: var(--primary-blue); }
@@ -170,20 +177,20 @@ body {
 .side-skills {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 6px; /* Reduced gap */
 }
 .side-skill-item {
   display: flex;
   align-items: flex-start;
-  gap: 8px;
-  font-size: 12.5px;
-  line-height: 1.4;
+  gap: 6px;
+  font-size: 12px; /* Slightly smaller text */
+  line-height: 1.3; /* Tighter line height */
   color: var(--text-dark);
 }
 .side-skill-item::before {
   content: '■';
   color: var(--primary-blue);
-  font-size: 11px;
+  font-size: 10px;
   margin-top: 1px;
 }
 
@@ -193,16 +200,16 @@ body {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 40px;
+  height: 30px;
   background: var(--primary-blue);
 }
 .sidebar-footer::before {
   content: '';
   position: absolute;
-  top: -20px;
+  top: -15px;
   left: 0;
   width: 100%;
-  height: 40px;
+  height: 30px;
   background: var(--primary-blue);
   border-radius: 50%;
 }
@@ -211,20 +218,20 @@ body {
 .main {
   width: 68%;
   background: white;
-  padding: 35px 40px 40px 40px;
+  padding: 25px 35px 30px 35px; /* Reduced padding */
 }
 
 .section {
-  margin-bottom: 25px;
+  margin-bottom: 18px; /* Reduced margin */
 }
 
 /* Main Headings */
 .main-title {
   color: var(--primary-blue);
-  font-size: 22px;
-  font-weight: 400;
-  margin-bottom: 15px;
-  padding-bottom: 5px;
+  font-size: 20px; /* Slightly smaller */
+  font-weight: 500;
+  margin-bottom: 10px; /* Reduced margin */
+  padding-bottom: 3px;
   position: relative;
 }
 .main-title::after {
@@ -239,14 +246,14 @@ body {
 
 /* Text & Paragraphs */
 .profile-text {
-  font-size: 13px;
+  font-size: 12.5px;
   color: var(--text-dark);
   text-align: justify;
 }
 
 /* Entry Layout (Education / Experience) */
 .entry {
-  margin-bottom: 15px;
+  margin-bottom: 10px; /* Reduced margin */
 }
 .entry-header {
   display: flex;
@@ -258,27 +265,27 @@ body {
 }
 .entry-date {
   font-weight: 700;
-  font-size: 12.5px;
+  font-size: 12px;
   white-space: nowrap;
 }
 .entry-subtitle {
   color: var(--primary-blue);
-  font-size: 12.5px;
-  margin-top: 2px;
-  margin-bottom: 4px;
+  font-size: 12px;
+  margin-top: 1px;
+  margin-bottom: 2px; /* Reduced margin */
 }
 .entry-desc {
-  font-size: 12.5px;
+  font-size: 12px;
   color: var(--text-light);
-  margin-top: 4px;
+  margin-top: 2px;
 }
 .bullets {
-  padding-left: 18px;
-  margin-top: 5px;
+  padding-left: 16px;
+  margin-top: 2px; /* Reduced margin */
 }
 .bullets li {
-  font-size: 12.5px;
-  margin-bottom: 3px;
+  font-size: 12px;
+  margin-bottom: 1.5px; /* Reduced margin */
   color: var(--text-dark);
 }
 
@@ -312,11 +319,6 @@ body {
         <h3 class="side-title">Personal details</h3>
         
         <div class="contact-item">
-          <!-- User Icon -->
-          <svg class="contact-icon" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-          Ayoob Rasheed
-        </div>
-        <div class="contact-item">
           <!-- Email Icon -->
           <svg class="contact-icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
           ayoobrasheed3@gmail.com
@@ -326,10 +328,20 @@ body {
           <svg class="contact-icon" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
           +92 370 9013067
         </div>
-        <div class="contact-item" style="align-items: flex-start;">
+        <div class="contact-item">
           <!-- Home Icon -->
-          <svg class="contact-icon" viewBox="0 0 24 24" style="margin-top:2px;"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
-          <div>Peshawar, Pakistan<br>linkedin.com/in/ayoob-rasheed</div>
+          <svg class="contact-icon" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+          Peshawar, Pakistan
+        </div>
+        <div class="contact-item">
+          <!-- LinkedIn Icon -->
+          <svg class="contact-icon" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          <a href="https://www.linkedin.com/in/ayoob-rasheed/" target="_blank">linkedin.com/in/ayoob-rasheed</a>
+        </div>
+        <div class="contact-item">
+          <!-- GitHub Icon -->
+          <svg class="contact-icon" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.45-1.15-1.11-1.46-1.11-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+          <a href="https://github.com/Mr-Ayoob-Rasheed/" target="_blank">Github.com/Mr-Ayoob-Rasheed/</a>
         </div>
       </div>
 
@@ -356,7 +368,6 @@ body {
         </div>
       </div>
 
-      <!-- NEW SKILLS SECTION IN SIDEBAR -->
       <div class="side-section">
         <h3 class="side-title">Skills Summary</h3>
         
@@ -365,7 +376,7 @@ body {
           <div class="side-skill-item">Cross-platform UI development with Flutter and SQL</div>
           <div class="side-skill-item">Hardware Languages: Verilog (HDL)</div>
           <div class="side-skill-item">Hardware Design: Digital Logic, RTL, Circuit Theory</div>
-          <div class="side-skill-item">FPGA experience (Xilinx Spartan-6)</div>
+          <div class="side-skill-item">FPGA (Xilinx Spartan-6)</div>
           <div class="side-skill-item">Strong experience in embedded systems (Arduino, ESP32, MSP430)</div>
         </div>
       </div>
@@ -403,7 +414,7 @@ body {
 
       <div class="entry">
         <div class="entry-header">
-          <span>STEAM Camp Instructor – Secured IoT Lab</span>
+          <span>STEAM Camp Instructor – Secured IoT Devices Lab</span>
           <span class="entry-date">Jul 2026 - Present</span>
         </div>
         <div class="entry-subtitle">STEAM Summer Camp · UET Peshawar</div>
@@ -430,35 +441,12 @@ body {
 
       <div class="entry">
         <div class="entry-header">
-          <span>Autonomous Obstacle Avoidance Robot</span>
+          <span>Brick Breaker Video Game on FPGA</span>
         </div>
-        <div class="entry-subtitle">Digital Systems | Arduino UNO · C/C++ · L298N Motor Driver · Ultrasonic Sensor · Servo</div>
+        <div class="entry-subtitle">Digital System Design | Verilog HDL · Numato Mimas V2 (Spartan-6) · VGA</div>
         <ul class="bullets">
-          <li>Designed and implemented real-time control logic in C/C++ to autonomously navigate dynamic environments using sensor feedback — demonstrating core principles of digital system state management and timing-critical decision loops.</li>
-          <li>Architected the hardware-software interface between sensor input signals and motor driver outputs, applying structured design and testing methodology from concept to working prototype.</li>
-          <li>Performed iterative performance optimization of scanning logic to minimize response latency under constrained computational resources.</li>
-        </ul>
-      </div>
-
-      <div class="entry">
-        <div class="entry-header">
-          <span>Ultrasonic Radar Detection System</span>
-        </div>
-        <div class="entry-subtitle">Instrumentation | Arduino Nano · Ultrasonic Sensor · Servo · Angular Position Detection</div>
-        <ul class="bullets">
-          <li>Built a 180° rotating radar system that detects objects and resolves their exact angular position, demonstrating spatial signal measurement and data acquisition concepts applicable to sensing and instrumentation research.</li>
-          <li>Programmed scan-halt logic and indicator triggering with precise timing control, developing intuition for hardware state machines and interrupt-driven design.</li>
-        </ul>
-      </div>
-
-      <div class="entry">
-        <div class="entry-header">
-          <span>Bluetooth-Controlled Mobile Robot ("Soccer Bot")</span>
-        </div>
-        <div class="entry-subtitle">Digital Logic Design | Arduino UNO · HC-05 Bluetooth · L298N · Serial Protocol</div>
-        <ul class="bullets">
-          <li>Translated wireless serial commands from a smartphone into physical actuation — implementing a digital command decoder and motor control pipeline from scratch.</li>
-          <li>Designed as a practical DLD curriculum project, reinforcing digital logic principles including binary encoding, control flow, and I/O interfacing.</li>
+          <li>Developed a Brick Breaker video game using Verilog HDL, taking the concepts of digital logic and FPGA design from theory to a real, interactive hardware implementation.</li>
+          <li>Generated a 640×480 @ 60 Hz VGA display completely through hardware logic.</li>
         </ul>
       </div>
 
@@ -469,10 +457,42 @@ body {
         <div class="entry-subtitle">DBMS | SQL · Schema Design · Query Optimization · Team Project</div>
         <ul class="bullets">
           <li>Built a full-fledged database application to manage student fee records, track collections vs. outstanding dues, and flag defaulters in real time.</li>
-          <li>Designed normalized schemas and wrote complex SQL queries for analytics, including invoiced vs. collected amounts, semester-wise breakdowns, and defaulter tracking.</li>
-          <li>Collaborated in a three-person team, translating real-world data messiness into a robust schema design and optimized query performance under guidance of the course instructor.</li>
+          <li>Designed normalized schemas and wrote SQL queries for analytics, including invoiced vs. collected amounts, semester-wise breakdowns, and defaulter tracking.</li>
+          <li>Collaborated in a three-person team, translating real-world data messiness into a robust schema design and optimized query performance.</li>
         </ul>
       </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span>Autonomous Obstacle Avoidance Robot</span>
+        </div>
+        <div class="entry-subtitle">Digital Systems | Arduino UNO · C/C++ · L298N Motor Driver · Ultrasonic Sensor · Servo</div>
+        <ul class="bullets">
+          <li>Designed and implemented real-time control logic in C/C++ to autonomously navigate dynamic environments using sensor feedback.</li>
+          <li>Architected the hardware-software interface between sensor input signals and motor driver outputs, applying structured design and testing methodology from concept to working prototype.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span>Ultrasonic Radar Detection System</span>
+        </div>
+        <div class="entry-subtitle">Instrumentation | Arduino Nano · Ultrasonic Sensor · Servo · Angular Position Detection</div>
+        <ul class="bullets">
+          <li>Built a 180° rotating radar system that detects objects and resolves their exact angular position, demonstrating spatial signal measurement and data acquisition concepts applicable to sensing and instrumentation research.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <span>Bluetooth-Controlled Mobile Robot ("Soccer Bot")</span>
+        </div>
+        <div class="entry-subtitle">Digital Logic Design | Arduino UNO · HC-05 Bluetooth · L298N · Serial Protocol</div>
+        <ul class="bullets">
+          <li>Translated wireless serial commands from a smartphone into physical actuation — implementing a digital command decoder and motor control pipeline from scratch.</li>
+        </ul>
+      </div>
+
     </section>
 
   </main>
